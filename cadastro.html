@@ -25,7 +25,8 @@
     <main id="conteudo" class="estreito">
         <section>
             <h1 id="titulo-cadastro">Formulário de Cadastro</h1>
-            <p class="instrucoes">Preencha os campos abaixo. Os campos marcados com <strong>*</strong> são obrigatórios.</p>
+            <p class="instrucoes">Preencha os campos abaixo. Os campos marcados com <strong>*</strong> são obrigatórios.
+            </p>
 
             <form id="form-cadastro" action="#" method="post" aria-labelledby="titulo-cadastro">
 
@@ -56,8 +57,7 @@
                         <div class="campo">
                             <label for="cpf">CPF *</label>
                             <input type="text" id="cpf" name="cpf" required inputmode="numeric" maxlength="14"
-                                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" autocomplete="off"
-                                placeholder="000.000.000-00"
+                                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" autocomplete="off" placeholder="000.000.000-00"
                                 title="Informe o CPF no formato 000.000.000-00">
                         </div>
 
@@ -80,10 +80,10 @@
 
                     <div class="campo">
                         <label for="telefone">Telefone *</label>
-                        <input type="tel" id="telefone" name="telefone" required inputmode="tel" maxlength="15"
-                            pattern="\(\d{2}\) \d{4,5}-\d{4}" autocomplete="tel-national"
+                        <input type="tel" id="telefone" name="telefone" required inputmode="tel" maxlength="20"
+                            pattern="(\+55\s?)?\(?\d{2}\)?\s?\d{4,5}-?\d{4}" autocomplete="tel"
                             placeholder="(00) 00000-0000"
-                            title="Informe o telefone no formato (00) 00000-0000">
+                            title="Informe o telefone com DDD, por exemplo: (11) 98765-4321">
                         <small class="ajuda">Inclua o DDD.</small>
                     </div>
                 </fieldset>
@@ -94,15 +94,14 @@
                     <div class="campo">
                         <label for="cep">CEP *</label>
                         <input type="text" id="cep" name="cep" required inputmode="numeric" maxlength="9"
-                            pattern="\d{5}-\d{3}" autocomplete="postal-code"
-                            placeholder="00000-000"
+                            pattern="\d{5}-\d{3}" autocomplete="postal-code" placeholder="00000-000"
                             title="Informe o CEP no formato 00000-000">
                     </div>
 
                     <div class="campo">
                         <label for="logradouro">Rua, número e bairro *</label>
-                        <input type="text" id="logradouro" name="logradouro" required
-                            autocomplete="street-address" placeholder="Rua, número, bairro">
+                        <input type="text" id="logradouro" name="logradouro" required autocomplete="address-line1"
+                            placeholder="Rua, número, bairro">
                     </div>
 
                     <div class="linha-dupla">

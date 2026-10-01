@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a missão da [Nome da ONG] e saiba como apoiar.">
+    <title>Início — [Nome da ONG]</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+        <nav class="nav-principal" aria-label="Principal">
+            <ul>
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+        <header>
+            <h1>[Nome da ONG]</h1>
+            <p>Transformamos solidariedade em ação social na comunidade.</p>
+        </header>
+
+        <section id="sobre">
+            <h2>Nossa Missão e Propósito</h2>
+            <p>Descrição da missão e propósito da organização, destacando o impacto social.</p>
+            <figure>
+                <img src="assets/institucional.webp" alt="Voluntários em ação comunitária." width="720" height="400" loading="lazy">
+                <figcaption>Voluntários durante uma ação comunitária.</figcaption>
+            </figure>
+            <h2>Nossos Valores</h2>
+            <ul>
+                <li><strong>Transparência:</strong> Prestação de contas clara.</li>
+                <li><strong>Inclusão:</strong> Acessibilidade e acolhimento.</li>
+                <li><strong>Impacto:</strong> Transformação social.</li>
+            </ul>
+        </section>
+
+        <section id="como-ajudar">
+            <h2>Como Apoiar Nossa Causa</h2>
+            <p>Veja as vagas de voluntariado e as formas de doação na página de projetos.</p>
+            <a href="projetos.html#voluntariado" class="btn-acao">Conhecer as Formas de Apoio</a>
+            <a href="cadastro.html" class="btn-acao">Fazer meu Cadastro</a>
+        </section>
+
+        <section id="contato">
+            <h2>Fale Conosco</h2>
+            <p class="instrucoes">Entre em contato para dúvidas, voluntariado ou doações. <strong>*</strong> Campos obrigatórios.</p>
+            <address>
+                <p><strong>Endereço:</strong> Rua, Número, Bairro, Cidade - Estado, CEP</p>
+                <p><strong>Telefone:</strong> <a href="tel:+5500000000000">[Telefone]</a></p>
+                <p><strong>E-mail:</strong> <a href="mailto:contato@nomedaong.org">[E-mail]</a></p>
+                <p><strong>Atendimento:</strong> Dias e Horários</p>
+            </address>
+
+            <form action="#" method="post" aria-label="Formulário de contato">
+                <fieldset>
+                    <legend>Identificação</legend>
+                    <div class="campo">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Digite seu nome completo">
+                    </div>
+                    <div class="campo">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="seuemail@exemplo.com">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Mensagem</legend>
+                    <div class="campo">
+                        <label for="assunto">Assunto *</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="voluntariado">Quero ser Voluntário</option>
+                            <option value="doacao">Quero Fazer uma Doação</option>
+                            <option value="duvidas">Dúvidas Gerais</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="mensagem">Mensagem *</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 [Nome da ONG]. Projeto acadêmico.</p>
+    </footer>
+</body>
+</html>

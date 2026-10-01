@@ -1,0 +1,352 @@
+/* ==========================================================================
+   estilo.css — Folha de estilos central da ONG
+   Usada por: index.html, cadastro.html, projetos.html
+   Uso em cada página:  <link rel="stylesheet" href="estilo.css">
+   ========================================================================== */
+
+/* 1. TOKENS ---------------------------------------------------------------- */
+:root {
+    /* Cores (mantidas dos arquivos originais) */
+    --cor-primaria: #2c6e49;
+    --cor-primaria-escura: #1e4d33;
+    --cor-fundo: #f4f6f5;
+    --cor-superficie: #ffffff;
+    --cor-texto: #1f2a24;
+    --cor-texto-suave: #444444;
+    --cor-ajuda: #5b6570;
+    --cor-borda: #c9d4cd;
+    --cor-erro: #b3261e;
+
+    /* Tipografia */
+    --fonte-base: "Segoe UI", Arial, sans-serif;
+
+    /* Layout */
+    --largura-pagina: 780px;
+    --largura-estreita: 640px;
+    --raio-cartao: 10px;
+    --raio-campo: 6px;
+    --sombra-cartao: 0 2px 10px rgba(0, 0, 0, 0.08);
+    --espaco-secoes: 2rem;
+
+    font-family: var(--fonte-base);
+}
+
+/* 2. RESET E BASE ---------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 1rem;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    color: var(--cor-primaria-escura);
+    line-height: 1.25;
+}
+
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.3rem; }
+h3 { font-size: 1.1rem; }
+
+p { margin-top: 0; }
+
+a { color: var(--cor-primaria); }
+a:hover { color: var(--cor-primaria-escura); }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+:focus-visible {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+}
+
+/* 3. ESTRUTURA DE PÁGINA --------------------------------------------------- */
+/* Cabeçalho, seções e rodapé viram "cartões" empilhados com o mesmo ritmo. */
+.site-header,
+.site-footer,
+main {
+    max-width: var(--largura-pagina);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-secoes);
+}
+
+/* Variação para páginas de formulário (ex.: cadastro.html) */
+main.estreito,
+.site-header.estreito,
+.site-footer.estreito {
+    max-width: var(--largura-estreita);
+}
+
+.site-header,
+main > header,
+main > section,
+main > article {
+    background: var(--cor-superficie);
+    border-radius: var(--raio-cartao);
+    padding: 2rem;
+    box-shadow: var(--sombra-cartao);
+}
+
+/* Cabeçalho de página (projetos.html): destaque discreto à esquerda */
+main > header,
+.site-header {
+    border-left: 6px solid var(--cor-primaria);
+}
+
+.site-header { margin-bottom: var(--espaco-secoes); }
+
+main > header p:last-child,
+.site-header p:last-child { margin-bottom: 0; }
+
+/* Rodapé */
+.site-footer {
+    margin-top: var(--espaco-secoes);
+    padding: 0 0.5rem;
+    font-size: 0.9rem;
+    color: var(--cor-texto-suave);
+    text-align: center;
+}
+
+/* Navegação principal (dentro de .site-header) */
+.nav-principal ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-principal li { margin: 0; }
+
+.nav-principal a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-principal a:hover,
+.nav-principal a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+/* Link de pular para o conteúdo (acessibilidade) */
+.pular-conteudo {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    padding: 0.5rem 1rem;
+    background: var(--cor-primaria);
+    color: #fff;
+}
+
+.pular-conteudo:focus {
+    left: 0.5rem;
+    top: 0.5rem;
+    z-index: 10;
+}
+
+/* 4. CONTEÚDO EDITORIAL ---------------------------------------------------- */
+.instrucoes {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--cor-texto-suave);
+}
+
+ul { padding-left: 1.25rem; }
+li { margin-bottom: 0.5rem; }
+
+address {
+    font-style: normal;
+    margin-bottom: 1.5rem;
+}
+
+address p { margin-bottom: 0.5rem; }
+
+/* Itens internos (projetos, modalidades de doação) */
+section article {
+    margin-top: 1.25rem;
+    padding: 1.25rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+}
+
+section article > :last-child { margin-bottom: 0; }
+
+/* Figuras */
+figure { margin: 1.25rem 0; }
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--cor-ajuda);
+}
+
+/* Depoimentos */
+blockquote {
+    margin: 1.25rem 0 0;
+    padding: 1rem 1.25rem;
+    background: var(--cor-fundo);
+    border-left: 4px solid var(--cor-primaria);
+    border-radius: 0 8px 8px 0;
+}
+
+blockquote p { margin-bottom: 0.5rem; }
+
+cite {
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--cor-primaria-escura);
+}
+
+cite::before { content: "— "; }
+
+/* 5. BOTÕES ---------------------------------------------------------------- */
+.btn-acao,
+button {
+    display: inline-block;
+    padding: 0.85rem 1.5rem;
+    background: var(--cor-primaria);
+    color: #fff;
+    border: 0;
+    border-radius: var(--raio-campo);
+    font: inherit;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-acao { margin-top: 1rem; }
+
+.btn-acao:hover,
+.btn-acao:focus-visible,
+button:hover,
+button:focus-visible {
+    background: var(--cor-primaria-escura);
+    color: #fff;
+}
+
+/* 6. FORMULÁRIOS ----------------------------------------------------------- */
+fieldset {
+    margin: 0 0 1.5rem;
+    padding: 1.25rem 1.5rem 1.5rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.campo:last-child { margin-bottom: 0; }
+
+.linha-dupla {
+    display: flex;
+    gap: 1rem;
+}
+
+.linha-dupla .campo { flex: 1; }
+
+label {
+    margin-bottom: 0.35rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-campo);
+    background: #fff;
+    color: var(--cor-texto);
+    font: inherit;
+}
+
+textarea { resize: vertical; }
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 1px;
+    border-color: var(--cor-primaria);
+}
+
+/* Erro só depois que a pessoa interagiu com o campo */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+    border-color: var(--cor-erro);
+}
+
+small.ajuda {
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    color: var(--cor-ajuda);
+}
+
+/* Caixa de seleção com rótulo ao lado (ex.: consentimento LGPD) */
+.campo-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.campo-check input { margin-top: 0.3rem; }
+.campo-check label { margin: 0; font-weight: 400; }
+
+form button[type="submit"] {
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* 7. RESPONSIVIDADE E PREFERÊNCIAS ---------------------------------------- */
+@media (max-width: 480px) {
+    body { padding: 1rem 0.75rem; }
+
+    .site-header,
+    main > header,
+    main > section,
+    main > article { padding: 1.25rem; }
+
+    .linha-dupla { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+}

@@ -1,0 +1,139 @@
+<!-- Apresentação dos Projetos
+    Envolvido por <header> com <h1> e <p>, apresentando a visão geral das frentes de atuação da ONG.
+
+Projetos Sociais Ativos
+    <section> com <h2>, agrupando <article> por projeto com <h3>, <p>, <figure>, <img> e <figcaption>.
+
+Oportunidades de Voluntariado
+    <section> com <h2>, contendo <ul> e <li> para requisitos de vagas, além de texto <p> e botão de ação <a>.
+
+Campanhas e Formas de Doação
+    <section> com <h2>, com <article> para modalidades de contribuição (Pix, recorrente) e botões de doação <a>.
+
+Depoimentos e Impacto
+    <section> com <h2>, estruturando <blockquote>, <p> e <cite> para relatos de voluntários e beneficiários. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os projetos sociais, as vagas de voluntariado e as formas de doação da [Nome da ONG].">
+    <title>Projetos — [Nome da ONG]</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+        <nav class="nav-principal" aria-label="Principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+
+        <!-- Apresentação dos Projetos -->
+        <header>
+            <h1>Nossos Projetos</h1>
+            <p>Conheça as frentes de atuação da [Nome da ONG], as oportunidades para
+                voluntários e as formas de contribuir com a nossa causa.</p>
+        </header>
+
+        <!-- Projetos Sociais Ativos -->
+        <section id="projetos">
+            <h2>Projetos Sociais Ativos</h2>
+
+            <article>
+                <h3>Projeto Um</h3>
+                <p>Descrição do primeiro projeto, com público atendido, local de atuação e resultados esperados.</p>
+                <figure>
+                    <img src="assets/projeto-1.webp" alt="Atividade do Projeto Um com a comunidade."
+                        width="720" height="400" loading="lazy">
+                    <figcaption>Atividade do Projeto Um com a comunidade.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h3>Projeto Dois</h3>
+                <p>Descrição do segundo projeto, com público atendido, local de atuação e resultados esperados.</p>
+                <figure>
+                    <img src="assets/projeto-2.webp" alt="Voluntários realizando o Projeto Dois."
+                        width="720" height="400" loading="lazy">
+                    <figcaption>Voluntários realizando o Projeto Dois.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h3>Projeto Três</h3>
+                <p>Descrição do terceiro projeto, com público atendido, local de atuação e resultados esperados.</p>
+                <figure>
+                    <img src="assets/projeto-3.webp" alt="Encontro do Projeto Três."
+                        width="720" height="400" loading="lazy">
+                    <figcaption>Encontro do Projeto Três.</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <!-- Oportunidades de Voluntariado -->
+        <section id="voluntariado">
+            <h2>Oportunidades de Voluntariado</h2>
+            <p>Estamos com vagas abertas para pessoas que querem doar seu tempo e suas habilidades.
+                Para participar, é preciso atender aos requisitos abaixo:</p>
+            <ul>
+                <li>Ter 18 anos ou mais.</li>
+                <li>Disponibilidade mínima de 4 horas por semana.</li>
+                <li>Participar da reunião de acolhimento e orientação.</li>
+                <li>Compromisso com os valores da ONG: transparência, inclusão e impacto.</li>
+            </ul>
+            <p>Faça seu cadastro e nossa equipe entrará em contato para combinar os próximos passos.</p>
+            <a href="cadastro.html" class="btn-acao">Quero ser Voluntário</a>
+        </section>
+
+        <!-- Campanhas e Formas de Doação -->
+        <section id="doacao">
+            <h2>Campanhas e Formas de Doação</h2>
+            <p>Toda contribuição fortalece os nossos projetos. Escolha a modalidade que melhor se encaixa para você.</p>
+
+            <article>
+                <h3>Doação via Pix</h3>
+                <p>Contribuição única, feita a qualquer momento e no valor que você escolher.</p>
+                <p><strong>Chave Pix (CNPJ):</strong> 00.000.000/0001-00</p>
+                <a href="cadastro.html" class="btn-acao">Doar via Pix</a>
+            </article>
+
+            <article>
+                <h3>Doação Recorrente</h3>
+                <p>Contribuição mensal que garante a continuidade dos projetos ao longo do ano.</p>
+                <a href="cadastro.html" class="btn-acao">Ser Doador Mensal</a>
+            </article>
+        </section>
+
+        <!-- Depoimentos e Impacto -->
+        <section id="depoimentos">
+            <h2>Depoimentos e Impacto</h2>
+
+            <blockquote>
+                <p>Ser voluntário mudou a forma como enxergo a minha comunidade. Cada encontro é um aprendizado.</p>
+                <cite>Nome do Voluntário, voluntário desde 2024</cite>
+            </blockquote>
+
+            <blockquote>
+                <p>O apoio da ONG fez diferença na rotina da minha família e abriu novas oportunidades para nós.</p>
+                <cite>Nome do Beneficiário, participante do Projeto Um</cite>
+            </blockquote>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 [Nome da ONG]. Projeto acadêmico.</p>
+    </footer>
+</body>
+
+</html>

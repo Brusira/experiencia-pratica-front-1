@@ -156,55 +156,6 @@
     <footer class="site-footer estreito">
         <p>© 2026 [Nome da ONG]. Projeto acadêmico.</p>
     </footer>
-
-    <!-- <script>
-        // Máscaras de digitação
-        const mascaras = {
-            cpf: (v) => v.replace(/\D/g, "").slice(0, 11)
-                .replace(/(\d{3})(\d)/, "$1.$2")
-                .replace(/(\d{3})(\d)/, "$1.$2")
-                .replace(/(\d{3})(\d{1,2})$/, "$1-$2"),
-            cep: (v) => v.replace(/\D/g, "").slice(0, 8)
-                .replace(/(\d{5})(\d)/, "$1-$2"),
-            telefone: (v) => {
-                const d = v.replace(/\D/g, "").slice(0, 11);
-                const base = d.replace(/(\d{2})(\d)/, "($1) $2");
-                return d.length <= 10
-                    ? base.replace(/(\d{4})(\d)/, "$1-$2")
-                    : base.replace(/(\d{5})(\d)/, "$1-$2");
-            }
-        };
-
-        Object.keys(mascaras).forEach((id) => {
-            document.getElementById(id).addEventListener("input", (e) => {
-                e.target.value = mascaras[id](e.target.value);
-            });
-        });
-
-        // Validação dos dígitos verificadores do CPF
-        function cpfValido(valor) {
-            const c = valor.replace(/\D/g, "");
-            if (c.length !== 11 || /^(\d)\1+$/.test(c)) return false;
-            for (let t = 9; t < 11; t++) {
-                let soma = 0;
-                for (let i = 0; i < t; i++) soma += Number(c[i]) * (t + 1 - i);
-                const digito = ((soma * 10) % 11) % 10;
-                if (digito !== Number(c[t])) return false;
-            }
-            return true;
-        }
-
-        const campoCpf = document.getElementById("cpf");
-        campoCpf.addEventListener("input", () => {
-            const completo = campoCpf.value.length === 14;
-            campoCpf.setCustomValidity(
-                completo && !cpfValido(campoCpf.value) ? "CPF inválido. Confira os números." : ""
-            );
-        });
-
-        // Data de nascimento não pode ser futura
-        document.getElementById("nascimento").max = new Date().toISOString().split("T")[0];
-    </script> -->
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Início — [Nome da ONG]</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
     <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
     <header class="site-header">
@@ -29,7 +31,11 @@
             <h2>Nossa Missão e Propósito</h2>
             <p>Descrição da missão e propósito da organização, destacando o impacto social.</p>
             <figure>
-                <img src="assets/institucional.webp" alt="Voluntários em ação comunitária." width="720" height="400" loading="lazy">
+                <picture>
+                    <source srcset="imagens/institucional.webp" type="image/webp">
+                    <img src="imagens/institucional.jpg" alt="Voluntários em ação comunitária." width="720" height="400"
+                        loading="lazy">
+                </picture>
                 <figcaption>Voluntários durante uma ação comunitária.</figcaption>
             </figure>
             <h2>Nossos Valores</h2>
@@ -49,7 +55,8 @@
 
         <section id="contato">
             <h2>Fale Conosco</h2>
-            <p class="instrucoes">Entre em contato para dúvidas, voluntariado ou doações. <strong>*</strong> Campos obrigatórios.</p>
+            <p class="instrucoes">Entre em contato para dúvidas, voluntariado ou doações. <strong>*</strong> Campos
+                obrigatórios.</p>
             <address>
                 <p><strong>Endereço:</strong> Rua, Número, Bairro, Cidade - Estado, CEP</p>
                 <p><strong>Telefone:</strong> <a href="tel:+5500000000000">[Telefone]</a></p>
@@ -62,11 +69,13 @@
                     <legend>Identificação</legend>
                     <div class="campo">
                         <label for="nome">Nome Completo *</label>
-                        <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Digite seu nome completo">
+                        <input type="text" id="nome" name="nome" required autocomplete="name"
+                            placeholder="Digite seu nome completo">
                     </div>
                     <div class="campo">
                         <label for="email">E-mail *</label>
-                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="seuemail@exemplo.com">
+                        <input type="email" id="email" name="email" required autocomplete="email"
+                            placeholder="seuemail@exemplo.com">
                     </div>
                 </fieldset>
 
@@ -83,7 +92,8 @@
                     </div>
                     <div class="campo">
                         <label for="mensagem">Mensagem *</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                        <textarea id="mensagem" name="mensagem" rows="5" required
+                            placeholder="Escreva sua mensagem aqui..."></textarea>
                     </div>
                 </fieldset>
 
@@ -96,4 +106,5 @@
         <p>© 2026 [Nome da ONG]. Projeto acadêmico.</p>
     </footer>
 </body>
+
 </html>
